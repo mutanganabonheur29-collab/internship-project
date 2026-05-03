@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    footer{
+background:rgb(0, 0, 0);
+color:white;
+padding:20px;
+margin-top:40px;
+text-align:center;
+border-top:4px solid gold;
+font-size:18px;
+letter-spacing:1px;
+box-shadow:0 -3px 10px gray;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<title>Currency Converter</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+<nav>
+<a href="index.html" class="active">Home</a>
+<a href="converter.html">Converter</a>
+<a href="history.html">History</a>
+<a href="details.html">Details</a>
+<a href="settings.html">Settings</a>
+</nav>
+<div class="settings-box">
+
+<h1 id="title">Settings</h1>
+
+<label id="themeText">Choose Theme:</label><br>
+<select onchange="changeTheme(this.value)">
+<option value="light">Light</option>
+<option value="dark">Dark</option>
+</select>
+
+<br><br>
+
+<label id="brightText">Brightness:</label><br>
+<input type="range" min="50" max="150" value="100" onchange="changeBrightness(this.value)">
+
+<br><br>
+
+<label id="langText">Language:</label><br>
+<select onchange="changeLanguage(this.value)">
+<option value="en">English</option>
+<option value="rw">Kinyarwanda</option>
+<option value="fr">French</option>
+</select>
+
+</div>
+
+<script>
+function changeTheme(value){
+localStorage.setItem("theme", value);
+if(value=="dark"){
+document.body.classList.add("dark");
+}else{
+document.body.classList.remove("dark");
+}
+}
+
+window.onload = function(){
+let theme = localStorage.getItem("theme");
+if(theme === "dark"){
+document.body.classList.add("dark");
+document.querySelector('select[value="dark"]').selected = true;
+}
+if(typeof applyLanguage === 'function'){
+applyLanguage();
+}
+}
+
+function changeBrightness(value){
+document.body.style.filter="brightness("+value+"%)";
+}
+
+function changeLanguage(lang){
+localStorage.setItem("language", lang);
+applyLanguage();
+}
+</script>
+<script src="css/translations.js" defer></script>
+<footer bgcolor="black">
+<center>
+<hr>
+<font color="white" size="4" background-color="black">
+<p>© 2026 My Website | All Rights Reserved</p>
+Email: mutanganabonheur29@gmail.com  
+<p>Phone: +250 793789395</p>
+</font>
+</center>
+<div class="social-links">
+    <a href="https://facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://figma.com" target="_blank">
+        <i class="fab fa-figma"></i>
+    </a>
+
+    <a href="https://Github.com" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
+</footer>
+<script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+body{
+font-family: Arial;
+margin: 0;
+padding: 0;
+background: #f5f5f5;
+}
+
+nav{
+background: black;
+padding: 15px;
+text-align: center;
+}
+
+nav a{
+color: yellow;
+text-decoration: none;
+margin: 15px;
+font-size: 18px;
+}
+
+nav a:hover{
+color: white;
+}
+
+.converter-box{
+max-width: 400px;
+margin: auto;
+margin-top: 40px;
+padding: 20px;
+background: white;
+border-radius: 20px;
+box-shadow: 0 0 10px gray;
+}
+
+input,select,button{
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+font-size: 16px;
+}
+
+.swap-btn{
+background: lightcoral;
+color: white;
+border: none;
+}
+
+.convert-btn{
+background: blue;
+color: lawngreen;
+border: none;
+}
+
+.loading{
+display: none;
+text-align: center;
+background: rgb(28, 28, 58);
+}
+
+.dark{
+background: #111 !important;
+color: white !important;
+}
+
+.dark nav{
+background: #222 !important;
+}
+
+.dark .converter-box{
+background: #333 !important;
+color: white !important;
+}
+
+.dark #historyBox{
+background: #333 !important;
+color: white !important;
+}
+
+.dark .record{
+background: #444 !important;
+color: white !important;
+}
+
+.dark .container{
+background: #111 !important;
+color: white !important;
+}
+
+.dark input, .dark select, .dark textarea{
+background: #333 !important;
+color: white !important;
+border: 1px solid #555 !important;
+}
+
+.dark button{
+background: #444 !important;
+color: white !important;
+}
+
+.dark button:hover{
+background: #555 !important;
+}
+
+.dark footer{
+background: #000 !important;
+color: white !important;
+}
+
+.dark h1, .dark h2, .dark h3{
+color: white !important;
+}
+.body{
+    background-color: rgb(241, 218, 226);
+}
+body{
+font-family:Arial;
+background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+text-align:center;
+color:white;
+padding:40px;
+}
+
+
+footer{
+background:rgb(14, 5, 5);
+color:white;
+padding:20px;
+margin-top:40px;
+text-align:center;
+border-top:4px solid gold;
+font-size:18px;
+letter-spacing:1px;
+box-shadow:0 -3px 10px gray;
+}
+
+footer p{
+margin:5px;
+}
+
+footer a{
+color:gold;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+}
+
+footer a:hover{
+color:white;
+text-decoration:underline;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.social-icons a{
+color:white;
+font-size:28px;
+margin:10px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.social-icons a:hover{
+color:gold;
+transform:scale(1.2);
+}
+#historyBox{
+background: navy;     /* hindura color ushaka */
+color: black;        /* ibara ry'inyandiko */
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+header{
+background: navy;
+padding: 20px;
+text-align: center;
+}
+
+
+button{
+background: linear-gradient yellow;
+color: black;
+padding: 12px 25px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+transition: 0.3s;
+}
+
+button:hover{
+background: linear-gradient(90deg, yellow);
+transform: scale(1.05);
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Conversion History</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+background-color: "#00ff00"
+}
+
+nav{
+background:#111;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:rgb(250, 226, 4);
+text-decoration:none;
+margin:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+nav a.active{
+color:gold;
+}
+
+h1{
+text-align:center;
+margin-top:30px;
+color:#222;
+}
+
+#historyBox{
+width:80%;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+min-height:300px;
+}
+
+.record{
+padding:15px;
+margin-bottom:10px;
+background:#f0f0f0;
+border-left:5px solid green;
+font-size:18px;
+border-radius:8px;
+}
+
+.date{
+font-size:14px;
+color:gray;
+margin-top:5px;
+}
+
+button{
+padding:10px 10px;
+background:rgb(225, 241, 4);
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin:20px auto;
+display:block;
+font-size:16px;
+}
+
+button:hover{
+background:rgb(251, 243, 9);
+}
+
+footer{
+background:rgb(0, 0, 0);
+color:white;
+padding:20px;
+margin-top:40px;
+text-align:center;
+border-top:4px solid gold;
+font-size:18px;
+letter-spacing:1px;
+box-shadow:0 -3px 10px gray;
+}
+
+.social-links a{
+color:white;
+font-size:22px;
+margin:10px;
+text-decoration:none;
+}
+
+.social-links a:hover{
+color:gold;
+}
+#historyBox{
+background: rgb(147, 147, 165);     /* hindura color ushaka */
+color: black;        /* ibara ry'inyandiko */
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+button{
+background: linear-gradient yellow;
+color: black;
+padding: 12px 25px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+transition: 0.3s;
+}
+
+button:hover{
+background: linear-gradient(90deg, yellow);
+transform: scale(1.05);
+}
+</style>
+</head>
+
+<body bgcolor="#00ff00">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="converter.html">Converter</a>
+<a href="history.html" class="active">History</a>
+<a href="details.html">Details</a>
+<a href="settings.html">Settings</a>
+</nav>
+
+<h1>Conversion History</h1>
+
+<div id="historyBox"></div>
+
+<button onclick="clearHistory()">Clear History</button>
+
+<script>
+window.onload = function(){
+let theme = localStorage.getItem("theme");
+let brightness = localStorage.getItem("brightness");
+
+if(theme === "dark"){
+document.body.classList.add("dark");
+}
+
+if(brightness){
+document.body.style.filter = "brightness(" + brightness + "%)";
+}
+
+if(typeof applyLanguage === 'function'){
+applyLanguage();
+}
+}
+
+function changeTheme(value){
+localStorage.setItem("theme", value);
+if(value=="dark"){
+document.body.classList.add("dark");
+}else{
+document.body.classList.remove("dark");
+}
+}
+
+let history = JSON.parse(localStorage.getItem("history")) || [];
+
+let box = document.getElementById("historyBox");
+
+function showHistory(){
+
+box.innerHTML = "";
+
+if(history.length == 0){
+box.innerHTML = "<p>No conversion history yet.</p>";
+}else{
+
+history.reverse().forEach(item => {
+
+box.innerHTML += `
+<div class="record">
+${item.amount} ${item.from} = <b>${item.result}</b> ${item.to}
+<div class="date">${item.date}</div>
+</div>
+`;
+
+});
+
+}
+}
+
+showHistory();
+
+function clearHistory(){
+localStorage.removeItem("history");
+history = [];
+showHistory();
+}
+</script>
+<script src="css/translations.js" defer></script>
+
+<footer>
+<p>© 2026 My Website | All Rights Reserved</p>
+<p>Email: mutanganabonheur29@gmail.com</p>
+<p>Phone: +250 793789395</p>
+
+<div class="social-links">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-figma"></i></a>
+<a href="#"><i class="fab fa-github"></i></a>
+</div>
+</footer>
+
+</body>
+</html>

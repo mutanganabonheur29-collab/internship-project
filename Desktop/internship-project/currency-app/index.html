@@ -1,0 +1,93 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Exchange - Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body bgcolor="#00ff00">
+    <header>
+    <img src="wedsite.png" control width="90" height="90">
+    <h1><strong></strong><span style="color:goldenrod">MULTI-CURRENCY EXCHANGE SYSTEM</span></strong></h1>
+    </header>
+
+<nav>
+<a href="index.html" class="active">Home</a>
+<a href="converter.html" class="active">Converter</a>
+<a href="history.html">History</a>
+<a href="details.html">Details</a>
+<a href="settings.html">Settings</a>
+</nav>
+
+<section class="hero">
+<h1>Money Exchange System</h1>
+<p>Fast and easy currency conversion worldwide.</p>
+<button><a href="converter.html" class="btn"><b><span style="color:rgb(252, 182, 5)"><u>Now you can convert!!</u></b></span></a></button>
+</section>
+<script>
+window.onload = function(){
+let theme = localStorage.getItem("theme");
+let brightness = localStorage.getItem("brightness");
+
+if(theme === "dark"){
+document.body.classList.add("dark");
+}
+
+if(brightness){
+document.body.style.filter = "brightness(" + brightness + "%)";
+}
+
+if(typeof applyLanguage === 'function'){
+applyLanguage();
+}
+}
+
+function changeTheme(value){
+localStorage.setItem("theme", value);
+if(value=="dark"){
+document.body.classList.add("dark");
+}else{
+document.body.classList.remove("dark");
+}
+}
+</script>
+<script src="css/translations.js" defer></script>
+<footer bgcolor="black">
+<center>
+<hr>
+<font color="white" size="4" background-color="black">
+<p>© 2026 My Website | All Rights Reserved</p>
+Email: mutanganabonheur29@gmail.com  
+<p>Phone: +250 793789395</p>
+<div class="social-links">
+    <a href="https://facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://figma.com" target="_blank">
+        <i class="fab fa-figma"></i>
+    </a>
+
+    <a href="https://Github.com" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
+
+</font>
+</center>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>

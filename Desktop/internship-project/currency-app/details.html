@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    footer{
+background:rgb(0, 0, 0);
+color:white;
+padding:20px;
+margin-top:40px;
+text-align:center;
+border-top:4px solid gold;
+font-size:18px;
+letter-spacing:1px;
+box-shadow:0 -3px 10px gray;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<title>Currency Converter</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+<nav>
+<a href="index.html" class="active">Home</a>
+<a href="converter.html">Converter</a>
+<a href="history.html">History</a>
+<a href="details.html">Details</a>
+<a href="settings.html">Settings</a>
+</nav>
+    <div class="container">
+
+<h1>CURRENCY EXCHANGE SYSTEM DETAILS</h1>
+
+<h2>📌 Purpose</h2>
+<p>
+This system helps users convert money from one currency to another easily and quickly.
+It supports currencies like USD, EUR, GBP and RWF.
+</p>
+
+<h2>⚙️ Features</h2>
+<ul>
+<li>Real-time currency conversion (basic rates)</li>
+<li>Swap button to exchange currencies</li>
+<li>Conversion history saved in browser</li>
+<li>Dark mode and settings support</li>
+<li>Simple and user-friendly interface</li>
+</ul>
+
+<h2>💡 How it works</h2>
+<p>
+User enters an amount, selects source currency and target currency,
+then clicks convert. The system calculates the equivalent value using exchange rates.
+</p>
+
+<h2>🧠 Technologies Used</h2>
+<ul>
+<li>HTML – structure</li>
+<li>CSS – styling</li>
+<li>JavaScript – logic and interactivity</li>
+</ul>
+
+<h2>📂 Storage</h2>
+<p>
+All history data is saved using browser localStorage (no database required).
+</p>
+
+</div>
+
+    
+
+
+<footer bgcolor="black">
+<center>
+<hr>
+<font color="white" size="4" background-color="black">
+<p>© 2026 My Website | All Rights Reserved</p>
+Email: mutanganabonheur29@gmail.com  
+<p>Phone: +250 793789395</p>
+<div class="social-links">
+    <a href="https://facebook.com" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://twitter.com" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://figma.com" target="_blank">
+        <i class="fab fa-figma"></i>
+    </a>
+
+    <a href="https://Github.com" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+</div>
+
+</div>
+</font>
+</center>
+</footer>
+<script>
+window.onload = function(){
+let theme = localStorage.getItem("theme");
+let brightness = localStorage.getItem("brightness");
+
+if(theme === "dark"){
+document.body.classList.add("dark");
+}
+
+if(brightness){
+document.body.style.filter = "brightness(" + brightness + "%)";
+}
+
+if(typeof applyLanguage === 'function'){
+applyLanguage();
+}
+}
+
+function changeTheme(value){
+localStorage.setItem("theme", value);
+if(value=="dark"){
+document.body.classList.add("dark");
+}else{
+document.body.classList.remove("dark");
+}
+}
+</script>
+<script src="css/translations.js" defer></script>
+<script src="js/script.js" defer></script>
+</body>
+</html>
