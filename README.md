@@ -11,4 +11,7 @@ A Digital Patient Check-in System is an offline-capable web application designed
 It allows patients to register via a digital form, select symptoms, and join a real-time queue.
 
 
+[View Clinic System Manual](./clinic.docx)
+
+
 
