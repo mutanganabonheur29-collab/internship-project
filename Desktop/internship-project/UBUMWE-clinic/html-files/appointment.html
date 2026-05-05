@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments Management - Ubumwe Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+       
+        <header class="main-header">
+            <div class="logo-container">
+                <img src="healthcare-logo.svg" alt="Logo" class="logo">
+                <h1>UBUMWE CLINIC - APPOINTMENTS</h1>
+            </div>
+        </header>
+
+ <div class="main-layout">
+    <aside class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+        <li><a href="index.html" class="menu-link">Home</a></li>
+        <li><a href="Dashboard.html" class="menu-link">Dashboard</a></li>
+        <li><a href="registration.html" class="menu-link">Patient Registration</a></li>
+        <li><a href="management.html" class="menu-link">Patient Management</a></li>
+        <li class="active"><a href="appointment.html" class="menu-link">Appointment</a></li>
+        <li><a href="report.html" class="menu-link">Reports</a></li>
+        <li><a href="setting.html" class="menu-link">Settings</a></li>
+    </ul>
+    </aside>
+
+    <main class="content-area">
+                <div class="appointment-header">
+                    <div class="date-selector">
+                        <label for="appointment-date">Select Date:</label>
+                        <input type="date" id="appointment-date" value="2026-04-27" class="date-input">
+                    </div>
+                    <button class="new-appointment-btn">New Appointment</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="appointments-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08:00</td>
+                                <td>Kevin</td>
+                                <td>Dr.mac</td>
+                                <td>Pending</td>
+                                <td><button class="action-link">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>09:30</td>
+                                <td>Marie</td>
+                                <td>Dr. Alice</td>
+                                <td>Done</td>
+                                <td><button class="action-link">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>11:00</td>
+                                <td>Eric</td>
+                                <td>Dr.alice</td>
+                                <td>Pending</td>
+                                <td><button class="action-link">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="summary-box">
+                    <h3>Today's Summary</h3>
+                    <p>Total: 12</p>
+                    <p>Pending: 5</p>
+                    <p>Done: 7</p>
+                </div>
+
+                <div class="offline-status">
+                    Offline Mode ACTIVE
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Handle date change
+        document.getElementById('appointment-date').addEventListener('change', function(e) {
+            const selectedDate = e.target.value;
+            console.log('Date changed to:', selectedDate);
+            
+            // Here you can add logic to filter appointments by date
+            // For now, just showing an alert
+            alert('Appointments for ' + new Date(selectedDate).toLocaleDateString());
+            
+            // You can add code here to update the appointments table
+            // based on the selected date
+        });
+
+        // Handle new appointment button
+        document.querySelector('.new-appointment-btn').addEventListener('click', function() {
+            alert('New appointment form would open here');
+        });
+
+        // Handle action buttons
+        document.querySelectorAll('.action-link').forEach(button => {
+            button.addEventListener('click', function() {
+                const action = this.textContent;
+                alert(action + ' appointment functionality would be implemented here');
+            });
+        });
+    </script>
+</body>
+</html>

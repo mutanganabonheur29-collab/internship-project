@@ -1,0 +1,42 @@
+UBUMWE CLINIC - WEBSITE ACCESS DOCUMENT
+
+==========================================
+
+PERMANENT WEBSITE LINK
+=====================
+
+After deployment, your clinic management system will be accessible at:
+
+Primary Link (Netlify): https://ubumwe-clinic.netlify.app
+Alternative Link (Vercel): https://ubumwe-clinic.vercel.app
+
+DEPLOYMENT INSTRUCTIONS
+=======================
+
+1. Run DEPLOY_NETLIFY.bat
+2. Create free Netlify account
+3. Upload dist folder
+4. Receive permanent link
+
+APPLICATION FEATURES
+===================
+
+• Patient Registration & Management
+• Appointment Scheduling
+• Reports & Analytics
+• Settings Configuration
+• Mobile Compatible
+• Offline Mode Available
+
+LOCAL ACCESS
+============
+For local development: http://localhost:3000
+Run START_CLINIC.bat to start locally
+
+CONTACT INFORMATION
+==================
+Application: UBUMWE Clinic Management System
+Technology: Vue.js 3
+Created: May 5, 2026
+
+Save this document for your permanent website link reference.

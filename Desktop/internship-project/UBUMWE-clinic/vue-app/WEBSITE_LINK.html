@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBUMWE Clinic - Website Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .link-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .link {
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .steps {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .print-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        @media print {
+            body { background: white; }
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏥 UBUMWE CLINIC</h1>
+        <h2>Permanent Website Access</h2>
+    </div>
+
+    <div class="link-card">
+        <h3>🌐 Your Permanent Website Link</h3>
+        <p><strong>After deployment, your clinic will be accessible at:</strong></p>
+        <p><a href="https://ubumwe-clinic.netlify.app" class="link">https://ubumwe-clinic.netlify.app</a></p>
+        <p><em>(Alternative: https://ubumwe-clinic.vercel.app)</em></p>
+    </div>
+
+    <div class="steps">
+        <h3>🚀 Deployment Steps:</h3>
+        <ol>
+            <li>Double-click: <strong>DEPLOY_NETLIFY.bat</strong></li>
+            <li>Create free Netlify account</li>
+            <li>Drag & drop the "dist" folder</li>
+            <li>Wait 2-3 minutes for deployment</li>
+            <li>Share your permanent link!</li>
+        </ol>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h4>👥 Patient Management</h4>
+            <p>Registration & Records</p>
+        </div>
+        <div class="feature">
+            <h4>📅 Appointments</h4>
+            <p>Scheduling System</p>
+        </div>
+        <div class="feature">
+            <h4>📊 Reports</h4>
+            <p>Analytics & Data</p>
+        </div>
+        <div class="feature">
+            <h4>⚙️ Settings</h4>
+            <p>Configuration Panel</p>
+        </div>
+    </div>
+
+    <div class="link-card">
+        <h3>📱 Access Information</h3>
+        <p><strong>Local Development:</strong> http://localhost:3000</p>
+        <p><strong>Start Locally:</strong> Double-click START_CLINIC.bat</p>
+        <p><strong>Technology:</strong> Vue.js 3 + Vite</p>
+        <p><strong>Created:</strong> May 5, 2026</p>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <button class="print-btn" onclick="window.print()">🖨️ Print This Document</button>
+    </div>
+
+    <div style="text-align: center; color: #666; font-size: 14px; margin-top: 30px;">
+        <p>Save this document for your permanent website reference</p>
+        <p>Share the link with patients, staff, or anyone who needs access!</p>
+    </div>
+</body>
+</html>
