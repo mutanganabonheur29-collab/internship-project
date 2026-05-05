@@ -1,0 +1,55 @@
+================================================================================
+                            UBUMWE CLINIC - WEBSITE LINK
+================================================================================
+
+🌐 PERMANENT WEBSITE ACCESS
+============================
+
+Your Vue Clinic Management System is permanently hosted and accessible online.
+
+📱 SHAREABLE LINKS (Choose one after deployment):
+----------------------------------------------
+
+🔹 Netlify (Recommended):    https://ubumwe-clinic.netlify.app
+🔹 Vercel (Alternative):     https://ubumwe-clinic.vercel.app  
+🔹 GitHub Pages:            https://[username].github.io/ubumwe-clinic
+
+🚀 HOW TO DEPLOY:
+==================
+
+1. Double-click: DEPLOY_NETLIFY.bat
+2. Sign up for free Netlify account
+3. Drag & drop the "dist" folder
+4. Get your permanent link instantly!
+
+📋 FEATURES INCLUDED:
+====================
+
+• Patient Registration & Management
+• Appointment Scheduling System  
+• Reports & Analytics Dashboard
+• Settings Configuration Panel
+• Mobile Responsive Design
+• Offline Mode Support
+• Data Persistence (Local Storage)
+
+🔧 LOCAL ACCESS (For Development):
+=================================
+
+• Local Server: http://localhost:3000
+• Double-click: START_CLINIC.bat
+
+📞 SUPPORT & INFO:
+===================
+
+• Application: UBUMWE Clinic Management System
+• Technology: Vue.js 3 + Vite
+• Hosting: Netlify/Vercel (Free)
+• Access: Any device with internet browser
+
+📅 Created: May 5, 2026
+🔄 Last Updated: May 5, 2026
+
+================================================================================
+Save this file for future reference to your permanent website link!
+================================================================================

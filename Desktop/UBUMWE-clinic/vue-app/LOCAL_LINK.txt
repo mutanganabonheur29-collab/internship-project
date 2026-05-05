@@ -1,0 +1,63 @@
+================================================================================
+                        UBUMWE CLINIC - LOCAL SERVER LINK
+================================================================================
+
+🌐 LOCAL ACCESS URL
+==================
+
+http://localhost:3000/
+
+📱 HOW TO ACCESS YOUR CLINIC SYSTEM:
+===================================
+
+1. Make sure the server is running
+2. Double-click: START_CLINIC.bat
+3. Open browser and go to: http://localhost:3000/
+4. Navigate using sidebar menu
+
+🏥 CLINIC SYSTEM PAGES:
+======================
+
+• Home:           http://localhost:3000/
+• Dashboard:      http://localhost:3000/dashboard
+• Registration:   http://localhost:3000/registration
+• Management:     http://localhost:3000/management
+• Appointment:     http://localhost:3000/appointment
+• Reports:         http://localhost:3000/reports
+• Settings:        http://localhost:3000/settings
+
+🚀 STARTUP INSTRUCTIONS:
+========================
+
+1. Open command prompt
+2. Navigate to vue-app folder
+3. Run: npm run start
+4. OR double-click: START_CLINIC.bat
+5. Wait for "Server running on port 3000" message
+
+📋 SYSTEM FEATURES:
+===================
+
+• Patient Registration & Management
+• Appointment Scheduling System
+• Reports with Analytics
+• Settings Configuration
+• Mobile Responsive Design
+• Offline Mode Support
+• Local Storage Data Persistence
+
+🔧 TROUBLESHOOTING:
+==================
+
+If localhost:3000 doesn't work:
+• Check if server is running
+• Try: http://127.0.0.1:3000/
+• Restart the server
+• Check if port 3000 is available
+
+📅 Created: May 5, 2026
+🔄 Last Updated: May 5, 2026
+
+================================================================================
+Save this document for quick access to your local clinic system!
+================================================================================

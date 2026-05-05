@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBUMWE Clinic - Local Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: #28a745;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .main-link {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .link {
+            font-size: 24px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+        .link:hover {
+            color: #0056b3;
+        }
+        .pages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .page-link {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .page-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .page-link a:hover {
+            text-decoration: underline;
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn-success {
+            background: #28a745;
+        }
+        .btn-success:hover {
+            background: #1e7e34;
+        }
+        @media print {
+            body { background: white; }
+            .btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏥 UBUMWE CLINIC</h1>
+        <h2>Local Server Access</h2>
+    </div>
+
+    <div class="main-link">
+        <h3>🌐 Main Clinic System</h3>
+        <a href="http://localhost:3000/" class="link">http://localhost:3000/</a>
+        <p><strong>Click the link above to open your clinic system</strong></p>
+        <button class="btn btn-success" onclick="window.open('http://localhost:3000/', '_blank')">🚀 Open Clinic System</button>
+    </div>
+
+    <div class="instructions">
+        <h3>📋 How to Start Your Local Server:</h3>
+        <ol>
+            <li>Double-click: <strong>START_CLINIC.bat</strong></li>
+            <li>Wait for "Server running on port 3000" message</li>
+            <li>Click the link above or type http://localhost:3000/ in browser</li>
+        </ol>
+    </div>
+
+    <div class="pages">
+        <div class="page-link">
+            <h4>🏠 Home</h4>
+            <a href="http://localhost:3000/">http://localhost:3000/</a>
+        </div>
+        <div class="page-link">
+            <h4>📊 Dashboard</h4>
+            <a href="http://localhost:3000/dashboard">/dashboard</a>
+        </div>
+        <div class="page-link">
+            <h4>👤 Registration</h4>
+            <a href="http://localhost:3000/registration">/registration</a>
+        </div>
+        <div class="page-link">
+            <h4>📋 Management</h4>
+            <a href="http://localhost:3000/management">/management</a>
+        </div>
+        <div class="page-link">
+            <h4>📅 Appointment</h4>
+            <a href="http://localhost:3000/appointment">/appointment</a>
+        </div>
+        <div class="page-link">
+            <h4>📈 Reports</h4>
+            <a href="http://localhost:3000/reports">/reports</a>
+        </div>
+        <div class="page-link">
+            <h4>⚙️ Settings</h4>
+            <a href="http://localhost:3000/settings">/settings</a>
+        </div>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h3>📱 Quick Access Options:</h3>
+        <button class="btn" onclick="window.open('http://localhost:3000/', '_blank')">🏥 Open Main System</button>
+        <button class="btn" onclick="window.open('http://localhost:3000/appointment', '_blank')">📅 Appointments</button>
+        <button class="btn" onclick="window.open('http://localhost:3000/reports', '_blank')">📈 Reports</button>
+        <button class="btn" onclick="window.open('http://localhost:3000/settings', '_blank')">⚙️ Settings</button>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <button class="btn btn-success" onclick="window.print()">🖨️ Print This Document</button>
+    </div>
+
+    <div style="text-align: center; color: #666; font-size: 14px; margin-top: 30px;">
+        <p>💾 Save this page as a bookmark for quick access to your clinic system</p>
+        <p>🔄 Make sure your local server is running before clicking links</p>
+        <p>📅 Created: May 5, 2026 | Technology: Vue.js 3</p>
+    </div>
+</body>
+</html>
