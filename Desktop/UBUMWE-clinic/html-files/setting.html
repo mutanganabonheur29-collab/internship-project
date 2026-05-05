@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Settings - Ubumwe Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="main-header">
+            <div class="logo-container">
+                <img src="healthcare-logo.svg" alt="Logo" class="logo">
+                <h1>UBUMWE CLINIC - SETTINGS</h1>
+            </div>
+        </header>
+
+
+      <div class="main-layout">
+    <aside class="sidebar">
+        <h3>Menu</h3>
+        <ul>
+        <li><a href="index.html" class="menu-link">Home</a></li>
+        <li><a href="Dashboard.html" class="menu-link">Dashboard</a></li>
+        <li><a href="registration.html" class="menu-link">Patient Registration</a></li>
+        <li><a href="management.html" class="menu-link">Patient Management</a></li>
+        <li><a href="appointment.html" class="menu-link">Appointment</a></li>
+        <li><a href="report.html" class="menu-link">Reports</a></li>
+        <li class="active"><a href="setting.html" class="menu-link">Settings</a></li>
+    </ul>
+    </aside>
+
+    <main class="content-area">
+                <div class="settings-card">
+                    <h2>Configuration Panel</h2>
+                    
+                    <div class="settings-grid">
+                        <div class="full-row">
+                            <label>Clinic name:</label>
+                            <input type="text" id="clinic-name" value="Hope Health Center">
+                        </div>
+
+                        <div class="setting-item">
+                            <label>Language:</label>
+                            <select id="language">
+                                <option>English</option>
+                                <option>Kinyarwanda</option>
+                                <option>French</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>Printer:</label>
+                            <select id="printer">
+                                <option>Default Printer</option>
+                                <option>HP LaserJet 400</option>
+                                <option>Canon PIXMA</option>
+                            </select>
+                        </div>
+
+                        <div class="setting-item">
+                            <label>Auto Backup:</label>
+                            <select id="auto-backup">
+                                <option>Enable</option>
+                                <option>Disable</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
+                            <label>Offline Mode:</label>
+                            <select id="offline-mode">
+                                <option>Active</option>
+                                <option>Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="blue-btn" id="reset-btn">Reset</button>
+                        <button class="blue-btn" id="save-btn">Save</button>
+                        <button class="blue-btn" id="print-btn">Print</button>
+                    </div>
+                </div>
+
+                <div class="settings-footer">
+                    System Ready > Offline System
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Load settings from localStorage on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSettings();
+        });
+
+        function loadSettings() {
+            const savedSettings = localStorage.getItem('clinicSettings');
+            if (savedSettings) {
+                const settings = JSON.parse(savedSettings);
+                document.getElementById('clinic-name').value = settings.clinicName || 'Hope Health Center';
+                document.getElementById('language').value = settings.language || 'English';
+                document.getElementById('printer').value = settings.printer || 'Default Printer';
+                document.getElementById('auto-backup').value = settings.autoBackup || 'Enable';
+                document.getElementById('offline-mode').value = settings.offlineMode || 'Active';
+            }
+        }
+
+        // Reset button functionality
+        document.getElementById('reset-btn').addEventListener('click', function() {
+            if (confirm('Are you sure you want to reset all settings to default?')) {
+                // Reset all form fields to default values
+                document.getElementById('clinic-name').value = 'Hope Health Center';
+                document.getElementById('language').value = 'English';
+                document.getElementById('printer').value = 'Default Printer';
+                document.getElementById('auto-backup').value = 'Enable';
+                document.getElementById('offline-mode').value = 'Active';
+                
+                // Clear localStorage
+                localStorage.removeItem('clinicSettings');
+                
+                alert('Settings have been reset to default values!');
+            }
+        });
+
+        // Save button functionality
+        document.getElementById('save-btn').addEventListener('click', function() {
+            // Get all current settings
+            const settings = {
+                clinicName: document.getElementById('clinic-name').value,
+                language: document.getElementById('language').value,
+                printer: document.getElementById('printer').value,
+                autoBackup: document.getElementById('auto-backup').value,
+                offlineMode: document.getElementById('offline-mode').value
+            };
+            
+            // Save to localStorage
+            localStorage.setItem('clinicSettings', JSON.stringify(settings));
+            
+            // Update status message
+            const footer = document.querySelector('.settings-footer');
+            footer.textContent = 'Settings Saved Successfully > Offline System';
+            footer.style.color = '#28a745';
+            
+            setTimeout(() => {
+                footer.textContent = 'System Ready > Offline System';
+                footer.style.color = '#333';
+            }, 3000);
+            
+            alert('Settings have been saved successfully!');
+        });
+
+        // Print button functionality
+        document.getElementById('print-btn').addEventListener('click', function() {
+            // Print the settings page
+            window.print();
+        });
+
+        // Update status message based on offline mode
+        document.getElementById('offline-mode').addEventListener('change', function() {
+            const footer = document.querySelector('.settings-footer');
+            if (this.value === 'Active') {
+                footer.textContent = 'System Ready > Offline System';
+            } else {
+                footer.textContent = 'System Ready > Online System';
+            }
+        });
+    </script>
+</body>
+</html>
